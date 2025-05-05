@@ -1,0 +1,405 @@
+\usepackage[utf8]{inputenc}
+
+\usepackage{enumitem}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[lite]{amsrefs}
+\usepackage{setspace}
+\usepackage{mathrsfs}
+
+\usepackage{xcolor}
+\usepackage{tikz-cd}
+\usepackage{esint}
+
+\topmargin 1cm
+\textheight 9.2in
+\textwidth 6.7in
+\oddsidemargin -0.1in
+\evensidemargin -0.1in
+\voffset -21mm
+
+\setstretch{1}
+
+%%% This part of the file (after the \documentclass command,
+%%% but before the \begin{document}) is called the ``preamble''.
+%%% This is where we put our macro definitions.
+
+
+%\DeclareMathOperator{\ho}{Ho}
+%\DeclareMathOperator*{\colim}{colim}
+
+\newcommand{\bA}{{\mathbb A}}
+\newcommand{\bD}{{\mathbb D}}
+\newcommand{\bK}{{\mathbb K}}
+\newcommand{\bN}{{\mathbb N}}
+\newcommand{\bQ}{{\mathbb Q}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\bC}{{\mathbb C}}
+\newcommand{\bZ}{{\mathbb Z}}
+\newcommand{\bF}{{\mathbb F}}
+\newcommand{\bG}{{\mathbb G}}
+\newcommand{\bH}{{\mathbb H}}
+\newcommand{\bT}{{\mathbb T}}
+\newcommand{\bP}{{\mathbb P}}
+
+%bold letters
+\newcommand{\bfA}{{\mathbf{A}}}
+\newcommand{\bfB}{{\mathbf{B}}}
+\newcommand{\bfC}{{\mathbf{C}}}
+\newcommand{\bfD}{{\mathbf{D}}}
+\newcommand{\bfE}{{\mathbf{E}}}
+\newcommand{\bfF}{{\mathbf{F}}}
+\newcommand{\bfG}{{\mathbf{G}}}
+\newcommand{\bfH}{{\mathbf{H}}}
+\newcommand{\bfI}{{\mathbf{I}}}
+\newcommand{\bfJ}{{\mathbf{J}}}
+\newcommand{\bfK}{{\mathbf{K}}}
+\newcommand{\bfL}{{\mathbf{L}}}
+\newcommand{\bfM}{{\mathbf{M}}}
+\newcommand{\bfN}{{\mathbf{N}}}
+\newcommand{\bfO}{{\mathbf{O}}}
+\newcommand{\bfP}{{\mathbf{P}}}
+\newcommand{\bfQ}{{\mathbf{Q}}}
+\newcommand{\bfR}{{\mathbf{R}}}
+\newcommand{\bfS}{{\mathbf{S}}}
+\newcommand{\bfT}{{\mathbf{T}}}
+\newcommand{\bfU}{{\mathbf{U}}}
+\newcommand{\bfV}{{\mathbf{V}}}
+\newcommand{\bfW}{{\mathbf{W}}}
+\newcommand{\bfX}{{\mathbf{X}}}
+\newcommand{\bfY}{{\mathbf{Y}}}
+\newcommand{\bfZ}{{\mathbf{Z}}}
+
+\newcommand{\bfa}{{\mathbf{a}}}
+\newcommand{\bfb}{{\mathbf{b}}}
+\newcommand{\bfc}{{\mathbf{c}}}
+\newcommand{\bfd}{{\mathbf{d}}}
+\newcommand{\bfe}{{\mathbf{e}}}
+\newcommand{\bff}{{\mathbf{f}}}
+\newcommand{\bfg}{{\mathbf{g}}}
+\newcommand{\bfh}{{\mathbf{h}}}
+\newcommand{\bfi}{{\mathbf{i}}}
+\newcommand{\bfj}{{\mathbf{j}}}
+\newcommand{\bfk}{{\mathbf{k}}}
+\newcommand{\bfl}{{\mathbf{l}}}
+\newcommand{\bfm}{{\mathbf{m}}}
+\newcommand{\bfn}{{\mathbf{n}}}
+\newcommand{\bfo}{{\mathbf{o}}}
+\newcommand{\bfp}{{\mathbf{p}}}
+\newcommand{\bfq}{{\mathbf{q}}}
+\newcommand{\bfr}{{\mathbf{r}}}
+\newcommand{\bfs}{{\mathbf{s}}}
+\newcommand{\bft}{{\mathbf{t}}}
+\newcommand{\bfu}{{\mathbf{u}}}
+\newcommand{\bfv}{{\mathbf{v}}}
+\newcommand{\bfw}{{\mathbf{w}}}
+\newcommand{\bfx}{{\mathbf{x}}}
+\newcommand{\bfy}{{\mathbf{y}}}
+\newcommand{\bfz}{{\mathbf{z}}}
+
+
+
+
+%script letters
+\newcommand{\sa}{{\mathscr{a}}}
+\newcommand{\sA}{{\mathscr{A}}}
+\newcommand{\sB}{{\mathscr{B}}}
+\newcommand{\sC}{{\mathscr{C}}}
+\newcommand{\sD}{{\mathscr{D}}}
+\newcommand{\sE}{{\mathscr{E}}}
+\newcommand{\sF}{{\mathscr{F}}}
+\newcommand{\sG}{{\mathscr{G}}}
+\newcommand{\sH}{{\mathscr{H}}}
+\newcommand{\sI}{{\mathscr{I}}}
+\newcommand{\sJ}{{\mathscr{J}}}
+\newcommand{\sK}{{\mathscr{K}}}
+\newcommand{\sL}{{\mathscr{L}}}
+\newcommand{\sM}{{\mathscr{M}}}
+\newcommand{\sN}{{\mathscr{N}}}
+\newcommand{\sO}{{\mathscr{O}}}
+\newcommand{\sP}{{\mathscr{P}}}
+\newcommand{\sQ}{{\mathscr{Q}}}
+\newcommand{\sR}{{\mathscr{R}}}
+\newcommand{\sS}{{\mathscr{S}}}
+\newcommand{\sT}{{\mathscr{T}}}
+\newcommand{\sU}{{\mathscr{U}}}
+\newcommand{\sV}{{\mathscr{V}}}
+\newcommand{\sW}{{\mathscr{W}}}
+\newcommand{\sX}{{\mathscr{X}}}
+\newcommand{\sY}{{\mathscr{Y}}}
+\newcommand{\sZ}{{\mathscr{Z}}}
+
+%      Capital script letters
+  \newcommand{\A}{{\mathcal{A}}}
+  \newcommand{\B}{{\mathcal{B}}}
+  \newcommand{\C}{{\mathcal{C}}}
+  \newcommand{\D}{{\mathcal{D}}}
+  \newcommand{\E}{{\mathcal{E}}}
+  \newcommand{\F}{{\mathcal{F}}}
+  \newcommand{\G}{{\mathcal{G}}}
+\renewcommand{\H}{{\mathcal{H}}}
+  \newcommand{\I}{{\mathcal{I}}}
+  \newcommand{\J}{{\mathcal{J}}}
+  \newcommand{\K}{{\mathcal{K}}}  
+\renewcommand{\L}{{\mathcal{L}}}
+  \newcommand{\M}{{\mathcal{M}}}
+  \newcommand{\N}{{\mathcal{N}}}
+\renewcommand{\O}{{\mathcal{O}}}
+\renewcommand{\P}{{\mathcal{P}}}
+  \newcommand{\Q}{{\mathcal{Q}}}
+  \newcommand{\R}{{\mathcal{R}}}
+\renewcommand{\S}{{\mathcal{S}}}
+  \newcommand{\T}{{\mathcal{T}}}
+  \newcommand{\U}{{\mathcal{U}}}
+  \newcommand{\V}{{\mathcal{V}}}
+  \newcommand{\W}{{\mathcal{W}}}
+  \newcommand{\X}{{\mathcal{X}}}
+  \newcommand{\Y}{{\mathcal{Y}}}
+  \newcommand{\Z}{{\mathcal{Z}}}
+
+%Gothic letters
+\newcommand{\fA}{{\mathfrak{A}}}
+\newcommand{\fB}{{\mathfrak{B}}}
+\newcommand{\fC}{{\mathfrak{C}}}
+\newcommand{\fD}{{\mathfrak{D}}}
+\newcommand{\fE}{{\mathfrak{E}}}
+\newcommand{\fF}{{\mathfrak{F}}}
+\newcommand{\fG}{{\mathfrak{G}}}
+\newcommand{\fH}{{\mathfrak{H}}}
+\newcommand{\fI}{{\mathfrak{I}}}
+\newcommand{\fJ}{{\mathfrak{J}}}
+\newcommand{\fK}{{\mathfrak{K}}}
+\newcommand{\fL}{{\mathfrak{L}}}
+\newcommand{\fM}{{\mathfrak{M}}}
+\newcommand{\fN}{{\mathfrak{N}}}
+\newcommand{\fO}{{\mathfrak{O}}}
+\newcommand{\fP}{{\mathfrak{P}}}
+\newcommand{\fQ}{{\mathfrak{Q}}}
+\newcommand{\fR}{{\mathfrak{R}}}
+\newcommand{\fS}{{\mathfrak{S}}}
+\newcommand{\fT}{{\mathfrak{T}}}
+\newcommand{\fU}{{\mathfrak{U}}}
+\newcommand{\fV}{{\mathfrak{V}}}
+\newcommand{\fW}{{\mathfrak{W}}}
+\newcommand{\fX}{{\mathfrak{X}}}
+\newcommand{\fY}{{\mathfrak{Y}}}
+\newcommand{\fZ}{{\mathfrak{Z}}}
+
+\newcommand{\fa}{{\mathfrak{a}}}
+\newcommand{\fb}{{\mathfrak{b}}}
+\newcommand{\fc}{{\mathfrak{c}}}
+\newcommand{\fd}{{\mathfrak{d}}}
+\newcommand{\fe}{{\mathfrak{e}}}
+\newcommand{\ff}{{\mathfrak{f}}}
+\newcommand{\fg}{{\mathfrak{g}}}
+\newcommand{\fh}{{\mathfrak{h}}}
+\newcommand{\fii}{{\mathfrak{i}}}
+\newcommand{\fj}{{\mathfrak{j}}}
+\newcommand{\fk}{{\mathfrak{k}}}
+\newcommand{\fl}{{\mathfrak{l}}}
+\newcommand{\fm}{{\mathfrak{m}}}
+\newcommand{\fn}{{\mathfrak{n}}}
+\newcommand{\fo}{{\mathfrak{o}}}
+\newcommand{\fp}{{\mathfrak{p}}}
+\newcommand{\fq}{{\mathfrak{q}}}
+\newcommand{\fr}{{\mathfrak{r}}}
+\newcommand{\fs}{{\mathfrak{s}}}
+\newcommand{\ft}{{\mathfrak{t}}}
+\newcommand{\fu}{{\mathfrak{u}}}
+\newcommand{\fv}{{\mathfrak{v}}}
+\newcommand{\fw}{{\mathfrak{w}}}
+\newcommand{\fx}{{\mathfrak{x}}}
+\newcommand{\fy}{{\mathfrak{y}}}
+\newcommand{\fz}{{\mathfrak{z}}}
+
+
+\newcommand{\AS}{\text{ as }}
+\newcommand{\FOR}{\text{ for }}
+\newcommand{\FORAL}{\text{ for all }}
+\newcommand{\AND}{\text{ and }}
+\newcommand{\IF}{\text{ if }}
+\newcommand{\OR}{\text{ or }}
+\newcommand{\qand}{\quad\text{and}\quad}
+\newcommand{\qor}{\quad\text{or}\quad}
+\newcommand{\qfor}{\quad\text{for}\quad}
+\newcommand{\qforal}{\quad\text{for all}\quad}
+\newcommand{\qif}{\quad\text{if}\quad}
+
+\newcommand{\Dim}{\operatorname{dim}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\ol}{\overline}
+\newcommand{\ran}{\operatorname{Ran}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\spr}{\operatorname{spr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\sym}{\operatorname{Sym}}
+\newcommand{\alt}{\operatorname{Alt}}
+\newcommand{\spec}{\operatorname{Spec}}
+\newcommand{\proj}{\operatorname{Proj}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\ann}{\operatorname{Ann}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\image}{\operatorname{im}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\res}{\operatorname{res}}
+\newcommand{\iso}{\operatorname{Iso}}
+\newcommand{\Int}{\operatorname{Int}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Ass}{\operatorname{Ass}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\Span}{\operatorname{span}}
+\renewcommand{\div}{\operatorname{div}}
+
+
+
+%categories
+\newcommand{\Ab}{\operatorname{\mathbf{Ab}}}
+\newcommand{\Mod}{\operatorname{\mathbf{Mod}}}
+\newcommand{\Set}{\operatorname{\mathbf{Set}}}
+
+
+\newcommand{\TODO}{{\color{red}TODO}}
+
+
+
+\newcommand{\CT}{\mathrm{C}(\bT)}
+\newcommand{\dlim}{\displaystyle\lim\limits}
+\newcommand{\upchi}{{\raise.35ex\hbox{$\chi$}}}
+\newenvironment{sbmatrix}{\left[\begin{smallmatrix}}{\end{smallmatrix}\right]}
+
+
+
+\newcommand{\itilde}{\tilde{\imath}}
+\newcommand{\jtilde}{\tilde{\jmath}}
+\newcommand{\ihat}{\hat{\imath}}
+\newcommand{\jhat}{\hat{\jmath}}
+
+
+\newcommand{\nc}{\newcommand}
+
+\nc{\Sym}{\operatorname{Sym}}
+\nc{\Rat}{\operatorname{Rat}}
+\nc{\codim}{\operatorname{codim}}
+\nc{\lra}{\longrightarrow}
+
+
+
+
+
+
+\newcommand{\pdiv}[2]{\frac{\partial {#1}}{\partial {#2}}}
+\newcommand{\LIST}[1]{{#1}_1 \cdots {#1}_n}
+\newcommand{\SES}[3]{0 \lra {#1} \lra {#2} \lra {#3} \lra 0}
+\newcommand{\SQUARE}[8]{{#1} \arrow[r, "{#5}"] \arrow[d, "{#6}"] & {#2} \arrow[d, "{#7}"] \\
+{#3} \arrow[r, "{#8}"] & {#4}}
+
+
+
+%       Theorem environments
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+\newtheorem{cor}[equation]{Corollary}
+\newtheorem{lem}[equation]{Lemma}
+\newtheorem{prop}[equation]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem*{defn*}{Definition}
+\newtheorem{defn}{Definition}
+\newtheorem{defns}[equation]{Definitions}
+\newtheorem{exercise}[equation]{Exercise}
+\newtheorem*{exercise*}{Exercise}
+
+\theoremstyle{definition}
+\newtheorem{axiom}{Axiom}
+
+\theoremstyle{remark}
+\newtheorem*{rem*}{Remark}
+\newtheorem{rem}[equation]{Remark}
+\newtheorem{ex}[equation]{Example}
+\newtheorem{notation}[equation]{Notation}
+\newtheorem{terminology}[equation]{Terminology}
+
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+%%%-------------------------------------------------------------------
+
+\newenvironment{problem}
+    {
+    \footnotesize
+    \begin{exercise*}
+    }
+    {
+    \end{exercise*}
+    }
+
+\newenvironment{eq}
+    {
+    \begin{equation}
+    }
+    {
+    \end{equation}
+    }
+
+\newenvironment{pf}
+    {\color{blue}
+    \begin{proof}
+    
+    }
+    {
+    
+    \end{proof}
+    \color{black}
+    }
+
+\newenvironment{note}
+    {
+    \color{red}
+    }
+    {
+    \color{black}
+    }
+    
+    
+    
+\newenvironment{enumalph}
+    {\begin{enumerate}[label = (\alph*)]
+    }
+    {\end{enumerate}
+    }
+    
+\newenvironment{enumrom}
+    {\begin{enumerate}[label = (\roman*)]
+    }
+    {\end{enumerate}
+    }
+
+\newenvironment{enumAlph}
+    {\begin{enumerate}[label=\Alph*]
+    }
+    {\end{enumerate}
+    }
+    
+    
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normb}[1]{{\left\lVert#1\right\rVert}_B}
+
+\newcommand{\class}[1]{\langle#1\rangle}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\paren}[1]{\left(#1 \right)}
